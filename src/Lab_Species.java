@@ -22,7 +22,6 @@ public class Lab_Species {
         System.out.println("name: "+sp3.getName());
         System.out.println("Population: "+sp3.getPopulation());
         System.out.println("GrowtgRate: "+sp3.getGrowthRate());
-        int futurepop=spe.predictpop(10);
         System.out.println("In the years the population will be "+futurepop);
     }
 }

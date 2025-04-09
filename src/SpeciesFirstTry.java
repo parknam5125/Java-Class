@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class SpeciesFirstTry {
-    private String name;
-    private int population;
-    private double growthRate;
+    String name;
+    int population;
+    double growthRate;
 
     public void setSpecies(String newName, int newPopulation, double newGrowthRate){
         name=newName;
@@ -36,6 +36,7 @@ public class SpeciesFirstTry {
         population=key.nextInt();
         System.out.println("Enter growth rate (% increase per year):");
         growthRate=key.nextDouble();
+        key.close();
     }
     void writeOutput(){
         System.out.println("Name= "+name);
@@ -67,5 +68,6 @@ public class SpeciesFirstTry {
             result=(int)pop;
         }
         return result;
+        
     }
 }

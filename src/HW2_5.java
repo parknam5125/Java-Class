@@ -23,6 +23,7 @@ public class HW2_5 {
         }
 
         System.out.println("Testing key "+key+" :"+output);
+        scan.close();
     }
     }
 

@@ -13,12 +13,12 @@ public class Student {
         return major;
     }
     void printData(){
-        Syetem.out.println("name: "+name);
-        Syetem.out.println("year: "+year);
-        Syetem.out.println("gpa: "+gpa);
-        Syetem.out.println("major: "+major);
-        Syetem.out.println("credits: "+credits);
-        Syetem.out.println("gpaSum: "+gpaSum);
+        System.out.println("name: "+name);
+        System.out.println("year: "+year);
+        System.out.println("gpa: "+gpa);
+        System.out.println("major: "+major);
+        System.out.println("credits: "+credits);
+        System.out.println("gpaSum: "+gpaSum);
     }
     void increaseYear(){
         year++;
