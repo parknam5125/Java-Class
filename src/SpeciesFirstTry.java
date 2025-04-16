@@ -4,6 +4,12 @@ public class SpeciesFirstTry {
     int population;
     double growthRate;
 
+    public boolean equals(SpeciesFirstTry otherObject){
+        return (this.name.equalsIgnoreCase(otherObject.name)&&
+                (this.population==otherObject.population)&&
+                (this.growthRate==otherObject.growthRate));
+    }
+
     public void setSpecies(String newName, int newPopulation, double newGrowthRate){
         name=newName;
         if(newPopulation>=0){
