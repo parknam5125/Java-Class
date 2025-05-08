@@ -1,26 +1,28 @@
-public class Student {
-    String name;
-    int year;
-    double gpa;
-    String major;
-    int credits;
-    double gpaSum;
-
-    String getname(){
-        return name;
+public class Student extends Person {
+    private int studentNumber;
+    public Student(){
+        super();
+        studentNumber=0;
     }
-    String getMajor(){
-        return major;
+    public Student(String initialName, int initialStudentNumber){
+        super(initialName);
+        studentNumber = initialStudentNumber;
     }
-    void printData(){
-        System.out.println("name: "+name);
-        System.out.println("year: "+year);
-        System.out.println("gpa: "+gpa);
-        System.out.println("major: "+major);
-        System.out.println("credits: "+credits);
-        System.out.println("gpaSum: "+gpaSum);
+    public void reset(String newName, int newStudentNumber){
+        setName(newName);
+        studentNumber = newStudentNumber;
     }
-    void increaseYear(){
-        year++;
+    public int getStudentNumber(){
+        return studentNumber;
+    }
+    public void setStudentNumber(int newStudentNumber){
+        studentNumber = newStudentNumber;
+    }
+    public void writeOutput(){
+        System.out.println("Name: " + getName());
+        System.out.println("StudenNumber: " + studentNumber);
+    }
+    public boolean hasSameName(Student other){
+        return this.getName().equalsIgnoreCase(other.getName())&&this.getStudentNumber().equalsIgnoreCase(other.studentNumber);
     }
 }
