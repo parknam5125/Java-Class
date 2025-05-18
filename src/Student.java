@@ -23,6 +23,6 @@ public class Student extends Person {
         System.out.println("StudenNumber: " + studentNumber);
     }
     public boolean hasSameName(Student other){
-        return this.getName().equalsIgnoreCase(other.getName())&&this.getStudentNumber().equalsIgnoreCase(other.studentNumber);
+        return false;
     }
 }
