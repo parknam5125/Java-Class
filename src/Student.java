@@ -2,27 +2,27 @@ public class Student extends Person {
     private int studentNumber;
     public Student(){
         super();
-        studentNumber=0;
+        studentNumber = 0;
     }
-    public Student(String initialName, int initialStudentNumber){
-        super(initialName);
-        studentNumber = initialStudentNumber;
+    public Student(String name, int studentNumber){
+        super(name);
+        this.studentNumber = studentNumber;
     }
-    public void reset(String newName, int newStudentNumber){
-        setName(newName);
-        studentNumber = newStudentNumber;
+    public void reset(String name, int studentNumber){
+        super.setName(name);
+        studentNumber = studentNumber;
     }
     public int getStudentNumber(){
         return studentNumber;
     }
-    public void setStudentNumber(int newStudentNumber){
-        studentNumber = newStudentNumber;
+    public void setStudentNumber(int num){
+        studentNumber = num;
     }
     public void writeOutput(){
-        System.out.println("Name: " + getName());
-        System.out.println("StudenNumber: " + studentNumber);
+        super.writeOutput();
+        System.out.println("StudenNumber is " + studentNumber);
     }
-    public boolean hasSameName(Student other){
-        return false;
+    public boolean equals(Student other){
+        return (this.hasSameName(other)) && (this.studentNumber == other.studentNumber);
     }
 }

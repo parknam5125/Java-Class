@@ -1,32 +1,34 @@
 public class Undergraduate extends Student {
-    private int level;
-
+    private level;
     public Undergraduate(){
         super();
-        level=1;
+        level = 1;
     }
-    public Undergraduate(String initialName, int initialStudentNumber, int initialLevel){
-        super(initialName, initialStudentNumber);
-        setLevel(initialLevel);
+    public Undergraduate(String name, int studentNumber, int level){
+        super(name, studentNumber);
+        this.level = level;
     }
-    public void reset(String newName, int newStudentNumber, int newLevel){
-        reset(newName, newStudentNumber);
-        setLevel(newLevel);
+    public void reset(String name, int studentNumber, int level){
+        super.reset(name, studentNumber);
+        setLevel(level);
     }
     public int getLevel(){
         return level;
     }
-    public void setLevel(int newLevel){
-        if((1<=newLevel)&&(newLevel<=4)){
-            level = newLevel;
+    public void setLevel(int level){
+        if((level>=1)&&(level<=4)){
+            this.level = level;
         }
         else{
             System.out.println("Illegal level!");
             System.exit(0);
         }
     }
-    public void writeOutput(){
+    public writeOutput(){
         super.writeOutput();
         System.out.println("StudentLevel: " + level);
+    }
+    public boolean equals(Undergraduate other){
+        return super.equals((Student)other)&&(this.level==other.level);
     }
 }

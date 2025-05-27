@@ -4,14 +4,14 @@ public class Calculator {
         this.l=l;
         this.r=r;
     }
-    public void divide(){
-        try{
-            System.out.print("계산결과는 ");
-            System.out.print(this.l/this.r);
-            System.out.print(" 입니다.");
+    public void divide() throws DividedByZeroException{
+        
+        if(this.r==0){
+            throw new DividedByZeroException();
         }
-        catch(Exception e){
-            System.out.println("오류: "+ e.getMessage());
-        }
+        System.out.print("계산결과는 ");
+        System.out.print(this.l/this.r);
+        System.out.print(" 입니다.");
+        
     }
 }

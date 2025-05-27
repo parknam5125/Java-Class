@@ -3,11 +3,11 @@ public class Person {
     public Person(){
         name = "No name yet";
     }
-    public Person(String initialName){
-        name = initialName;
+    public Person(String name){
+        this.name = name;
     }
-    public void setName(String newName){
-        name = newName;
+    public void setName(String name){
+        this.name = name;
     }
     public String getName(){
         return name;
@@ -15,7 +15,7 @@ public class Person {
     public void writeOutput(){
         System.out.println("Name: " + name);
     }
-    public boolean hasSameName(Person otherPerson){
-        return this.name.equalsIgnoreCase(otherPerson.name);
+    public boolean hasSameName(Person other){
+        return this.name.equalsIgnoreCase(other.name);
     }
 }
