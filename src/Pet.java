@@ -1,4 +1,6 @@
-public class Pet {
+import java.io.Serializable;
+
+public class Pet implements Serializable{
     private String name;
     private int age;
     private double weight;
@@ -30,6 +32,8 @@ Pet(double newWeight){
     age=0;
     weight=newWeight;
 }
-
+/*public String toString(){
+    return "name: " + name + "\nage: " + age "\nweight: " + weight;
+}*/
 
 }
